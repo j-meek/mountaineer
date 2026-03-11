@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mountaineer"
+version = "0.0.1"
+description = "A package for comparing mountain biodiversity"
+authors = [
+  { name="Jared Meek", email="jm4761@columbia.edu" }
+]
+urls = { "Homepage" = "https://github.com/j-meek/mountaineer" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7"
+dependencies = [
+   "pandas", "geopandas", "requests", "pygbif", "folium", "earthengine-api"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mountaineer"]
